@@ -1,0 +1,21 @@
+{
+  "name": "assignment4_jisungkim",
+  "version": "1.0.0",
+  "description": "PROG1800-Assignment4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jisung Kim",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "connect-flash": "*",
+    "ejs": "*",
+    "express": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongoose": "*"
+  }
+}

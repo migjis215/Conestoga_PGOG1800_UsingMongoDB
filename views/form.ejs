@@ -1,0 +1,163 @@
+<%- include('_header'); -%> 
+ 
+<div id="orderForm">
+    <form method="post" action="/form">
+        <fieldset>
+            <legend>Shipping Details</legend>
+
+            <label for="fullName">Full Name:</label>
+            <input
+                type="text"
+                name="fullName"
+                class="contactForm"
+                id="nameInput"
+                value="<% if (locals.fullName) { %><%= fullName %><% } %>"
+            /><br />
+            <label for="email">Email:</label>
+            <input
+                type="text"
+                name="email"
+                class="contactForm"
+                id="emailInput"
+                value="<% if (locals.email) { %><%= email %><% } %>"
+            /><br />
+            <label for="phone">Phone:</label>
+            <input
+                type="text"
+                name="phone"
+                class="contactForm"
+                id="phoneInput"
+                placeholder="555-555-5555"
+                value="<% if (locals.phone) { %><%= phone %><% } %>"
+            /><br />
+            <label for="address">Address:</label>
+            <input
+                type="text"
+                name="address"
+                class="contactForm"
+                id="addressInput"
+                value="<% if (locals.address) { %><%= address %><% } %>"
+            /><br />
+            <label for="city">City:</label>
+            <input
+                type="text"
+                name="city"
+                class="contactForm"
+                id="cityInput"
+                value="<% if (locals.city) { %><%= city %><% } %>"
+            /><br />
+            <label for="province">Province:</label>
+            <select name="province"
+                    class="contactForm"
+                    id="provinceInput">
+                <option value="">Select your province</option>
+                <option value="AB"
+                <% if (locals.province == 'AB') { %>selected<% } %> 
+                >ALBERTA</option>
+                <option value="BC"
+                <% if (locals.province == 'BC') { %>selected<% } %> 
+                >BRITISH COLUMBIA</option>
+                <option value="MB"
+                <% if (locals.province == 'MB') { %>selected<% } %> 
+                >MANITOBA</option>
+                <option value="NB"
+                <% if (locals.province == 'NB') { %>selected<% } %> 
+                >NEW BRUNSWICK</option>
+                <option value="NL"
+                <% if (locals.province == 'NL') { %>selected<% } %> 
+                >NEWFOUNDLAND and LABRADOR</option>
+                <option value="NT"
+                <% if (locals.province == 'NT') { %>selected<% } %> 
+                >NORTHWEST TERRITORIES</option>
+                <option value="NS"
+                <% if (locals.province == 'NS') { %>selected<% } %> 
+                >NOVA SCOTIA</option>
+                <option value="NU"
+                <% if (locals.province == 'NU') { %>selected<% } %> 
+                >NUNAVUT</option>
+                <option value="ON"
+                <% if (locals.province == 'ON') { %>selected<% } %> 
+                >ONTARIO</option>
+                <option value="PE"
+                <% if (locals.province == 'PE') { %>selected<% } %> 
+                >PRINCE EDWARD ISLAND</option>
+                <option value="QC"
+                <% if (locals.province == 'QC') { %>selected<% } %> 
+                >QUEBEC</option>
+                <option value="SK"
+                <% if (locals.province == 'SK') { %>selected<% } %> 
+                >SASCATCHEWAN</option>
+                <option value="YT"
+                <% if (locals.province == 'YT') { %>selected<% } %> 
+                >YUKON</option>
+            </select><br />
+            <label for="postCode">Post Code:</label>
+            <input
+                type="text"
+                name="postCode"
+                class="contactForm"
+                id="postCodeInput"
+                placeholder="N5N 5N5"
+                value="<% if (locals.postCode) { %><%= postCode %><% } %>"
+            /><br />
+        </fieldset>
+
+        <fieldset>
+            <legend>Purchase Information</legend>
+
+            <label for="product1">Game Station:</label>
+            <input
+                type="text"
+                name="product1"
+                id="product1"
+                class="products"
+                placeholder="Please enter a number"
+                value="<% if (locals.product1) { %><%= product1 %><% } %>"
+            /><br />
+            <label for="product2">Max Box:</label>
+            <input
+                type="text"
+                name="product2"
+                id="product2"
+                class="products"
+                placeholder="Please enter a number"
+                value="<% if (locals.product2) { %><%= product2 %><% } %>"
+            /><br />
+            <label for="product3">Do Switch:</label>
+            <input
+                type="text"
+                name="product3"
+                id="product3"
+                class="products"
+                placeholder="Please enter a number"
+                value="<% if (locals.product3) { %><%= product3 %><% } %>"
+            /><br />
+            <label for="deliveryTime">Delivery Time:</label>
+            <select name="deliveryTime"
+                    id="deliveryTimeInput">
+                <option value="">Select the delivery time</option>
+                <option value="30" 
+                <% if (locals.deliveryTime == '30') { %>selected<% } %> 
+                >1 day (+ $30.00)</option>
+                <option value="25"
+                <% if (locals.deliveryTime == '25') { %>selected<% } %> 
+                >2 days (+ $25.00)</option>
+                <option value="20"
+                <% if (locals.deliveryTime == '20') { %>selected<% } %> 
+                >3 days (+ $20.00)</option>
+                <option value="15"
+                <% if (locals.deliveryTime == '15') { %>selected<% } %> 
+                >4 days (+ $15.00)</option>
+            </select><br />
+        </fieldset>
+
+        <input type="submit" id="order" value="Place Order" />
+        <% if(typeof errors !== 'undefined'){ 
+            for (var error of errors) { %>
+                <h4><%= error.msg %></h4>
+            <% }
+        } %> 
+    </form>
+</div>
+
+<%- include('_footer'); -%>

@@ -1,0 +1,238 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: black;
+}
+.header {
+    height: 80px;
+    width: auto;
+}
+header img {
+    display: inline-block;
+    width: 12rem;
+}
+.title {
+    display: inline-block;
+}
+.title h2,
+.title p {
+    margin: 0;
+    color: white;
+    display: inline-block;
+}
+.title h2 {
+    font-size: 5rem;
+    line-height: 0.9;
+}
+.title p {
+    font-size: 1.4rem;
+}
+nav {
+    margin-top: 0.7rem;
+    display: inline-block;
+}
+nav ul {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    float: left;
+}
+nav ul li a {
+    font-size: 1.6rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 125px;
+    padding-top: 1.2rem;
+    background-color: black;
+    color: white;
+}
+#newOrder a:hover,
+#newOrder a:focus {
+    color: #00b0f0;
+}
+#allOrders a:hover,
+#allOrders a:focus {
+    color: #fb392f;
+}
+
+/* Form */
+fieldset {
+    margin: 2.5rem 0;
+    border: none;
+}
+legend {
+    color: #263761;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+label {
+    display: inline-block;
+    width: 12rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    text-align: right;
+}
+input,
+select {
+    width: 25rem;
+    margin-left: 1rem;
+}
+br {
+    clear: both;
+}
+#order {
+    margin: 1rem 0;
+    width: 16rem;
+    height: 4.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    border: #00b0f0;
+    border-radius: 20px;
+    background-color: #00b0f0;
+    box-shadow: 5px 5px #fb392f;
+}
+h4 {
+    color: red;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Invoice */
+#invoice {
+    width: 80.1rem;
+    margin: 0 auto 0;
+}
+h3 {
+    color: #263761;
+    font-size: 2.5rem;
+}
+
+/* Invoice - Contact */
+#contact {
+    width: 40rem;
+    height: 30.5rem;
+    padding-top: 2rem;
+    float: left;
+    border-right: 0.1rem solid #234761;
+    position: relative;
+}
+#contact label,
+#contact span {
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    width: 9rem;
+}
+#contact label {
+    color: #263761;
+    font-weight: lighter;
+    text-align: left;
+}
+#contact span.validInput {
+    width: 25rem;
+    font-size: 1.8rem;
+    text-align: right;
+    margin-right: 5rem;
+}
+#contact label.address,
+#contact span.address {
+    margin-bottom: 1rem;
+}
+#contact img {
+    width: 7rem;
+    position: absolute;
+    left: 0px;
+}
+
+/* Invoice - Payment */
+#payment {
+    width: 40rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    float: right;
+}
+#payment label,
+#payment span {
+    display: inline-block;
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+    width: 22rem;
+}
+#payment label {
+    margin-left: 5rem;
+    text-align: left;
+}
+#payment label.items,
+#payment span.itemCount,
+#payment span.price {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+}
+#payment label.items {
+    width: 12rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+#payment span.itemCount {
+    width: 10rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+#payment span.price {
+    width: 12rem;
+    text-align: right;
+}
+#payment label.total,
+#payment span.total {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+/* Orders Table */
+.table {    
+    margin: 3rem auto;
+    width: 1000px;
+}
+table {
+    width: 100%;
+    font-size: 1.8rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th, td {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid #aed6f1;
+}
+th {
+    background-color: #ebf5fb;
+}
+
+/* Footer */
+footer {
+    clear: both;    
+    background-color: black;
+    margin-top: 2rem;
+}
+footer p {
+    padding: 3rem 0;
+    font-size: 1.2rem;
+    color: white;
+}

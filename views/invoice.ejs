@@ -1,0 +1,71 @@
+<%- include('_header'); -%> 
+
+<div id="invoice">
+    <h3>Invoice</h3>
+    <div id="contact">
+        <input 
+            type="hidden" 
+            id="validation" 
+            name="validation" 
+            value="<%= locals.validation %>"
+        />
+
+        <label>Full Name</label>
+        <span class="validInput" id="contact1"><%= fullName %></span>
+        <br />
+        <label>Email</label>
+        <span class="validInput" id="contact2"><%= email %></span>
+        <br />
+        <label>Phone</label>
+        <span class="validInput" id="contact3"><%= phone %></span>
+        <br />
+        <label class="address">Address</label>
+        <span class="validInput address" id="contact4"><%= address %></span>
+        <br />
+        <label class="address">&nbsp;</label>
+        <span class="validInput address" id="contact5"><%= city %></span>
+        <br />
+        <label class="address">&nbsp;</label>
+        <span class="validInput address" id="contact6"><%= province %></span>
+        <br />
+        <label class="address">&nbsp;</label>
+        <span class="validInput address" id="contact7"><%= postCode %></span>
+        <br />
+
+        <img id="truck" src="images/delivery.png" alt="Delivery truck" />
+    </div>
+    <div id="payment">
+        <label class="items"><%= product1Name %></label>
+        <span class="itemCount">
+            <% if (locals.product1) {%><%= product1 %><% }
+            else { %>0<% }%> X $<%= product1Price %></span>
+        <span class="price">$<%= product1Cost %></span>
+        <br />
+        <label class="items"><%= product2Name %></label>
+        <span class="itemCount">
+            <% if (locals.product2) {%><%= product2 %><% }
+            else { %>0<% }%> X $<%= product2Price %></span>
+        <span class="price">$<%= product2Cost %></span>
+        <br />
+        <label class="items"><%= product3Name %></label>
+        <span class="itemCount">
+            <% if (locals.product3) {%><%= product3 %><% }
+            else { %>0<% }%> X $<%= product3Price %></span>
+        <span class="price">$<%= product3Cost %></span>
+
+        <label>Shipping Charges</label>
+        <span class="price" id="shippingCharges">$<%= deliveryTime %></span>
+        <br />
+        <label>Sub Total</label>
+        <span class="price" id="subTotal">$<%= subTotal %></span>
+        <br />
+        <label id="taxLabel">Taxes <%= taxRate * 100 %>%</label>
+        <span class="price" id="taxSpan">$<%= taxes %></span>
+        <br />
+        <label class="total">Total</label>
+        <span class="price total" id="totalPrice">$<%= total %></span>
+        <br />
+    </div>
+</div>
+
+<%- include('_footer'); -%>
